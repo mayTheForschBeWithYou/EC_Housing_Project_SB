@@ -1,0 +1,19 @@
+SpringBoard Capstone Project Proposal
+M Forschler
+
+**What is the problem you want to solve?**  
+I would like to know what drives the price of a home in Eau Claire, WI. My end goal is to invest in a rental property. I want to incorporate demographics and crime data to find a reasonably priced property in a low-crime area for my first property.  
+ 
+**Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn’t have otherwise?**  
+I am the client in this case and I intend to use the data to make a better-informed decision about where to buy and where not to buy a property as well as what features I should look at when considering a property. I have lived in the area for over a decade, but this is not my hometown. Are there areas that I’m over looking that would be good for a rental property? Are there areas to avoid due to high crime rate?  
+
+**What data are you going to use for this? How will you acquire this data?**  
+* [Demographic data per census tract](https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk) - https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk  
+* [Real Estate Transfer data](https://www.revenue.wi.gov/Pages/ERETR/data-home.aspx) - https://www.revenue.wi.gov/Pages/ERETR/data-home.aspx  
+* Crime data - This data is no longer up to date and a copy has to be requested from the county sheriff or city police department.  
+
+**In brief, outline your approach to solving this problem (knowing that this might change later).**  
+I plan to gather real estate transfer data for Eau Claire county. With this I can use the Google geocoding API https://developers.google.com/maps/documentation/geocoding/intro to get coordinates of properties with houses (separate just land sales) and assign these to census tracts. The crime data, if provided, will follow the same pattern and be mapped to the census tract. There is a risk here that the location of a crime is removed for privacy reasons. I plan to use linear regression and multivariate data analysis to build a model for determining the selling price of a property(land + house). I could also find this data for a similar city, like La Crosse, Wisconsin, and compare what I find. Potentially, I could use the model and to predict what listed or future properties will sell for. Once the properties sell and the transaction is recorded, I could see how well the model performed. This however, could take months to test.  
+
+**What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.**  
+Deliverables will include the raw data and sources, the commented code in R used to perform the analysis, GitHub repository, and a write-up with graphics.  
